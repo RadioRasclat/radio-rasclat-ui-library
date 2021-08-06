@@ -1,5 +1,5 @@
 {
-  "name": "@your-company/pattern-lib",
+  "name": "@radio-rasclat/pattern-lib",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^10.1.5",

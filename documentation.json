@@ -24,7 +24,7 @@
     "components": [
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-f074ef0cf4d9b0a781ccfba88e6293a3",
+            "id": "component-ButtonComponent-511138ce47637e4bbdd5db8f00608a99",
             "file": "projects/pattern-lib/src/lib/button/button.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.Emulated"
@@ -69,6 +69,11 @@
                     "name": "pink",
                     "line": 11,
                     "type": "boolean"
+                },
+                {
+                    "name": "variant",
+                    "line": 15,
+                    "type": "\"primary\" | \"secondary\""
                 }
             ],
             "outputsClass": [],
@@ -80,7 +85,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 18
+                    "line": 19
                 }
             ],
             "hostBindings": [],
@@ -88,7 +93,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';\n\n@Component({\n  selector: 'pl-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n  encapsulation: ViewEncapsulation.Emulated\n})\nexport class ButtonComponent implements OnInit {\n  @Input('label') label: string | null;\n  @Input('pink') pink: boolean;\n  @Input('noShadow') noShadow: boolean;\n  @Input('bordersLeft') bordersLeft: boolean = true;\n  @Input('bordersRight') bordersRight: boolean = true;\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';\n\n@Component({\n  selector: 'pl-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n  encapsulation: ViewEncapsulation.Emulated\n})\nexport class ButtonComponent implements OnInit {\n  @Input('label') label: string | null;\n  @Input('pink') pink: boolean;\n  @Input('noShadow') noShadow: boolean;\n  @Input('bordersLeft') bordersLeft: boolean = true;\n  @Input('bordersRight') bordersRight: boolean = true;\n  @Input('variant') variant: 'primary' | 'secondary';\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -101,7 +106,7 @@
                 "name": "constructor",
                 "description": "",
                 "args": [],
-                "line": 14
+                "line": 15
             },
             "implements": [
                 "OnInit"
@@ -404,7 +409,7 @@
                 "linktype": "component",
                 "name": "ButtonComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/8",
+                "coverageCount": "0/9",
                 "status": "low"
             },
             {

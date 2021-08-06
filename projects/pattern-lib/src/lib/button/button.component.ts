@@ -12,6 +12,7 @@ export class ButtonComponent implements OnInit {
   @Input('noShadow') noShadow: boolean;
   @Input('bordersLeft') bordersLeft: boolean = true;
   @Input('bordersRight') bordersRight: boolean = true;
+  @Input('variant') variant: 'primary' | 'secondary';
 
   constructor() { }
 
