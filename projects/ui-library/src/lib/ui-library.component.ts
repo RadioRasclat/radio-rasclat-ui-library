@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'pl-pattern-lib',
+  selector: 'pl-ui-library',
   template: `
     <p>
-      pattern-lib works!
+      ui-library works!
     </p>
   `,
   styles: [
   ]
 })
-export class PatternLibComponent implements OnInit {
+export class UiLibraryComponent implements OnInit {
 
   constructor() { }
 

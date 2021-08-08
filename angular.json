@@ -3,43 +3,43 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pattern-lib": {
+    "ui-library": {
       "projectType": "library",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
-      "root": "projects/pattern-lib",
-      "sourceRoot": "projects/pattern-lib/src",
+      "root": "projects/ui-library",
+      "sourceRoot": "projects/ui-library/src",
       "prefix": "pl",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/pattern-lib/tsconfig.lib.json",
-            "project": "projects/pattern-lib/ng-package.json"
+            "tsConfig": "projects/ui-library/tsconfig.lib.json",
+            "project": "projects/ui-library/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/pattern-lib/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ui-library/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/pattern-lib/src/test.ts",
-            "tsConfig": "projects/pattern-lib/tsconfig.spec.json",
-            "karmaConfig": "projects/pattern-lib/karma.conf.js"
+            "main": "projects/ui-library/src/test.ts",
+            "tsConfig": "projects/ui-library/tsconfig.spec.json",
+            "karmaConfig": "projects/ui-library/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/pattern-lib/tsconfig.lib.json",
-              "projects/pattern-lib/tsconfig.spec.json"
+              "projects/ui-library/tsconfig.lib.json",
+              "projects/ui-library/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -48,5 +48,5 @@
         }
       }
     }},
-  "defaultProject": "pattern-lib"
+  "defaultProject": "ui-library"
 }

@@ -1,5 +1,5 @@
 {
-  "extends": "../projects/pattern-lib/tsconfig.lib.json",
+  "extends": "../projects/ui-library/tsconfig.lib.json",
   "compilerOptions": {
     "types": [
       "node"

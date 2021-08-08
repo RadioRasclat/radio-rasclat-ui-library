@@ -3,13 +3,13 @@
     "interfaces": [],
     "injectables": [
         {
-            "name": "PatternLibService",
-            "id": "injectable-PatternLibService-34e0db803a2f0a88394224d35c00c928",
-            "file": "projects/pattern-lib/src/lib/pattern-lib.service.ts",
+            "name": "UiLibraryService",
+            "id": "injectable-UiLibraryService-bf99be0ae26ebc68a098bc13bf05fa53",
+            "file": "projects/ui-library/src/lib/ui-library.service.ts",
             "properties": [],
             "methods": [],
             "description": "",
-            "sourceCode": "import { Injectable } from '@angular/core';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class PatternLibService {\n\n  constructor() { }\n}\n",
+            "sourceCode": "import { Injectable } from '@angular/core';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class UiLibraryService {\n\n  constructor() { }\n}\n",
             "constructorObj": {
                 "name": "constructor",
                 "description": "",
@@ -25,7 +25,7 @@
         {
             "name": "ButtonComponent",
             "id": "component-ButtonComponent-511138ce47637e4bbdd5db8f00608a99",
-            "file": "projects/pattern-lib/src/lib/button/button.component.ts",
+            "file": "projects/ui-library/src/lib/button/button.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.Emulated"
             ],
@@ -116,7 +116,7 @@
         {
             "name": "ButtonsetComponent",
             "id": "component-ButtonsetComponent-828982bc8ad2494d4e8e5b00af64305d",
-            "file": "projects/pattern-lib/src/lib/buttonset/buttonset.component.ts",
+            "file": "projects/ui-library/src/lib/buttonset/buttonset.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.Emulated"
             ],
@@ -172,18 +172,18 @@
             "templateData": "<div class=\"buttonset\">\n    <pl-button label=\"Button 1\" [bordersRight]=\"false\" noShadow=true></pl-button>\n    <pl-button label=\"Button 2\" [bordersLeft]=\"false\" [bordersRight]=\"false\" [noShadow]=\"true\"></pl-button>\n    <pl-button label=\"Button 3\" [bordersLeft]=\"false\" [noShadow]=\"true\"></pl-button>\n</div>"
         },
         {
-            "name": "PatternLibComponent",
-            "id": "component-PatternLibComponent-de8134bbcc97996ac01e0b7e25b0a671",
-            "file": "projects/pattern-lib/src/lib/pattern-lib.component.ts",
+            "name": "UiLibraryComponent",
+            "id": "component-UiLibraryComponent-5f8cc0b217b108a9f028b5774eb8f5d0",
+            "file": "projects/ui-library/src/lib/ui-library.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "pl-pattern-lib",
+            "selector": "pl-ui-library",
             "styleUrls": [],
             "styles": [],
-            "template": "<p>\n  pattern-lib works!\n</p>\n",
+            "template": "<p>\n  ui-library works!\n</p>\n",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [],
@@ -204,7 +204,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'pl-pattern-lib',\n  template: `\n    <p>\n      pattern-lib works!\n    </p>\n  `,\n  styles: [\n  ]\n})\nexport class PatternLibComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'pl-ui-library',\n  template: `\n    <p>\n      ui-library works!\n    </p>\n  `,\n  styles: [\n  ]\n})\nexport class UiLibraryComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
@@ -221,7 +221,7 @@
     ],
     "modules": [
         {
-            "name": "PatternLibModule",
+            "name": "UiLibraryModule",
             "children": [
                 {
                     "type": "providers",
@@ -237,7 +237,7 @@
                             "name": "ButtonsetComponent"
                         },
                         {
-                            "name": "PatternLibComponent"
+                            "name": "UiLibraryComponent"
                         }
                     ]
                 },
@@ -255,7 +255,7 @@
                             "name": "ButtonsetComponent"
                         },
                         {
-                            "name": "PatternLibComponent"
+                            "name": "UiLibraryComponent"
                         }
                     ]
                 },
@@ -284,7 +284,7 @@
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/pattern-lib/src/test.ts",
+                "file": "projects/ui-library/src/test.ts",
                 "type": "",
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
             },
@@ -308,7 +308,7 @@
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/pattern-lib/src/test.ts",
+                "file": "projects/ui-library/src/test.ts",
                 "type": "literal type"
             },
             {
@@ -350,12 +350,12 @@
                     "defaultValue": "(args: ButtonsetComponent) => ({\n  component: ButtonsetComponent,\n  props: args,\n})"
                 }
             ],
-            "projects/pattern-lib/src/test.ts": [
+            "projects/ui-library/src/test.ts": [
                 {
                     "name": "context",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/pattern-lib/src/test.ts",
+                    "file": "projects/ui-library/src/test.ts",
                     "type": "",
                     "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
                 },
@@ -363,7 +363,7 @@
                     "name": "require",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/pattern-lib/src/test.ts",
+                    "file": "projects/ui-library/src/test.ts",
                     "type": "literal type"
                 }
             ],
@@ -404,7 +404,7 @@
         "status": "low",
         "files": [
             {
-                "filePath": "projects/pattern-lib/src/lib/button/button.component.ts",
+                "filePath": "projects/ui-library/src/lib/button/button.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "ButtonComponent",
@@ -413,7 +413,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/pattern-lib/src/lib/buttonset/buttonset.component.ts",
+                "filePath": "projects/ui-library/src/lib/buttonset/buttonset.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "ButtonsetComponent",
@@ -422,25 +422,25 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/pattern-lib/src/lib/pattern-lib.component.ts",
+                "filePath": "projects/ui-library/src/lib/ui-library.component.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "PatternLibComponent",
+                "name": "UiLibraryComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/3",
                 "status": "low"
             },
             {
-                "filePath": "projects/pattern-lib/src/lib/pattern-lib.service.ts",
+                "filePath": "projects/ui-library/src/lib/ui-library.service.ts",
                 "type": "injectable",
                 "linktype": "injectable",
-                "name": "PatternLibService",
+                "name": "UiLibraryService",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
                 "status": "low"
             },
             {
-                "filePath": "projects/pattern-lib/src/test.ts",
+                "filePath": "projects/ui-library/src/test.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -450,7 +450,7 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/pattern-lib/src/test.ts",
+                "filePath": "projects/ui-library/src/test.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",

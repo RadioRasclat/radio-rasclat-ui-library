@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { PatternLibService } from './pattern-lib.service';
+import { UiLibraryService } from './ui-library.service';
 
-describe('PatternLibService', () => {
-  let service: PatternLibService;
+describe('UiLibraryService', () => {
+  let service: UiLibraryService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(PatternLibService);
+    service = TestBed.inject(UiLibraryService);
   });
 
   it('should be created', () => {
