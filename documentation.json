@@ -24,7 +24,7 @@
     "components": [
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-511138ce47637e4bbdd5db8f00608a99",
+            "id": "component-ButtonComponent-946f3b2498c7bde39879a4caf26b772e",
             "file": "projects/ui-library/src/lib/button/button.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.Emulated"
@@ -44,35 +44,14 @@
             "viewProviders": [],
             "inputsClass": [
                 {
-                    "name": "bordersLeft",
-                    "defaultValue": "true",
-                    "line": 13,
-                    "type": "boolean"
-                },
-                {
-                    "name": "bordersRight",
-                    "defaultValue": "true",
-                    "line": 14,
-                    "type": "boolean"
-                },
-                {
                     "name": "label",
                     "line": 10,
                     "type": "string | null"
                 },
                 {
-                    "name": "noShadow",
-                    "line": 12,
-                    "type": "boolean"
-                },
-                {
-                    "name": "pink",
-                    "line": 11,
-                    "type": "boolean"
-                },
-                {
                     "name": "variant",
-                    "line": 15,
+                    "defaultValue": "'primary'",
+                    "line": 11,
                     "type": "\"primary\" | \"secondary\""
                 }
             ],
@@ -85,7 +64,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 19
+                    "line": 15
                 }
             ],
             "hostBindings": [],
@@ -93,11 +72,11 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';\n\n@Component({\n  selector: 'pl-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n  encapsulation: ViewEncapsulation.Emulated\n})\nexport class ButtonComponent implements OnInit {\n  @Input('label') label: string | null;\n  @Input('pink') pink: boolean;\n  @Input('noShadow') noShadow: boolean;\n  @Input('bordersLeft') bordersLeft: boolean = true;\n  @Input('bordersRight') bordersRight: boolean = true;\n  @Input('variant') variant: 'primary' | 'secondary';\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';\n\n@Component({\n  selector: 'pl-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n  encapsulation: ViewEncapsulation.Emulated\n})\nexport class ButtonComponent implements OnInit {\n  @Input('label') label: string | null;\n  @Input('variant') variant: 'primary' | 'secondary' = 'primary';\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../../styles/utils'; // TODO: create an alias to avoid '../' paths\n\n:host { \n  display: inline-block;\n}\n\nbutton {\n  background: $primary-col;\n  padding: 1rem 2rem;\n  border-radius: $button-radius;\n  appearance: none;\n  border: 0;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  font-size: 1.5rem;\n  letter-spacing: 1px;\n  color: $primary-col-text;\n  box-shadow: $pl-button-shadow;\n  cursor: pointer;\n\n  &.make-pink {\n    background: #ff00a2;\n    box-shadow: $pl-button-shadow-alt;\n  }\n\n  &.rm-right-borders {\n    border-top-right-radius: 0;\n    border-bottom-right-radius: 0;\n  }\n\n  &.rm-left-borders {\n    border-top-left-radius: 0;\n    border-bottom-left-radius: 0;\n  }\n\n  &.no-shadow {\n    box-shadow: none;\n  }\n}\n\n\n\n// .make-pink {\n//   background: #ff00a2;\n//   box-shadow: 0 4px 10px rgba(55, 55, 55, 0.3), 0 6px 35px rgb(200 55 150 / 70%);\n// }",
+                    "data": "@import '../../styles/utils';\n\n:host {\n  display: inline-block;\n}\n\nbutton {\n  border: 0;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  cursor: pointer;\n  font-family: \"Adieu\";\n  font-size: 1rem;\n  min-width: 60px;\n  min-height: 40px;\n  padding: 8px 12px;\n  border-radius: 24px;\n\n  &.primary {\n    background: #6157f7;\n    color: #ffffff;\n  }\n\n  &.secondary {\n    background: transparent;\n    color: #000000;\n    border: 2px solid #e0e0e0;\n  }\n}\n",
                     "styleUrl": "./button.component.scss"
                 }
             ],
@@ -106,12 +85,12 @@
                 "name": "constructor",
                 "description": "",
                 "args": [],
-                "line": 15
+                "line": 11
             },
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<button \n    [attr.is-pink]=\"pink\" \n    [ngClass]=\"{'make-pink': pink, 'rm-left-borders': !bordersLeft, 'rm-right-borders': !bordersRight, 'no-shadow': noShadow}\">\n    {{label ? label : \"No Label provided 🧐\"}}\n</button>"
+            "templateData": "<button\n  [class.primary] = \"variant === 'primary'\"\n  [class.secondary] = \"variant === 'secondary'\"\n>\n  {{label ? label : \"No Label provided 🧐\"}}\n</button>\n"
         },
         {
             "name": "ButtonsetComponent",
@@ -289,15 +268,7 @@
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
             },
             {
-                "name": "FancyBlueButton",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "stories/Button.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "FancyPinkButton",
+                "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "stories/Button.stories.ts",
@@ -310,6 +281,14 @@
                 "subtype": "variable",
                 "file": "projects/ui-library/src/test.ts",
                 "type": "literal type"
+            },
+            {
+                "name": "Secondary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "Template",
@@ -369,7 +348,7 @@
             ],
             "stories/Button.stories.ts": [
                 {
-                    "name": "FancyBlueButton",
+                    "name": "Primary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "stories/Button.stories.ts",
@@ -377,7 +356,7 @@
                     "defaultValue": "Template.bind({})"
                 },
                 {
-                    "name": "FancyPinkButton",
+                    "name": "Secondary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "stories/Button.stories.ts",
@@ -409,7 +388,7 @@
                 "linktype": "component",
                 "name": "ButtonComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/9",
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {
@@ -464,7 +443,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "FancyBlueButton",
+                "name": "Primary",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -474,7 +453,7 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "FancyPinkButton",
+                "name": "Secondary",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

@@ -1,4 +1,3 @@
-// also exported from '@storybook/angular' if you can deal with breaking changes in 6.1
 import { Story, Meta } from '@storybook/angular/types-6-0';
 import { ButtonComponent } from '../projects/ui-library/src/lib/button/button.component';
 
@@ -7,7 +6,6 @@ export default {
   component: ButtonComponent,
   argTypes: {
     label: { control: 'text' },
-    // we need to override here since in Angular it could be null as well and therefore it would become an ambigious data type for storybook
   }
 } as Meta;
 
@@ -16,13 +14,26 @@ const Template: Story<ButtonComponent> = (args: ButtonComponent) => ({
   props: args,
 });
 
-export const FancyBlueButton = Template.bind({});
-FancyBlueButton.args = {
-  label: 'Button',
+export const Primary = Template.bind({});
+Primary.args = {
+  label: 'Download Broadcast',
+  variant: 'primary',
 };
 
-export const FancyPinkButton = Template.bind({});
-FancyPinkButton.args = {
-  label: 'Pink version',
-  pink: true,
+export const Secondary = Template.bind({});
+Secondary.args = {
+  label: 'Download Broadcast',
+  variant: 'secondary',
+};
+
+export const PrimaryWithIcon = Template.bind({});
+PrimaryWithIcon.args = {
+  label: 'Download Broadcast',
+  variant: 'primary',
+};
+
+export const SecondaryWithIcon = Template.bind({});
+SecondaryWithIcon.args = {
+  label: 'Download Broadcast',
+  variant: 'secondary',
 };

@@ -8,11 +8,8 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 })
 export class ButtonComponent implements OnInit {
   @Input('label') label: string | null;
-  @Input('pink') pink: boolean;
-  @Input('noShadow') noShadow: boolean;
-  @Input('bordersLeft') bordersLeft: boolean = true;
-  @Input('bordersRight') bordersRight: boolean = true;
-  @Input('variant') variant: 'primary' | 'secondary';
+  @Input('variant') variant: 'primary' | 'secondary' = 'primary';
+  @Input('variant') icon: string | null;
 
   constructor() { }
 
