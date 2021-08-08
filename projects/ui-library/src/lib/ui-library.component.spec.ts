@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PatternLibComponent } from './pattern-lib.component';
+import { UiLibraryComponent } from './ui-library.component';
 
-describe('PatternLibComponent', () => {
-  let component: PatternLibComponent;
-  let fixture: ComponentFixture<PatternLibComponent>;
+describe('UiLibraryComponent', () => {
+  let component: UiLibraryComponent;
+  let fixture: ComponentFixture<UiLibraryComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PatternLibComponent ]
+      declarations: [ UiLibraryComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PatternLibComponent);
+    fixture = TestBed.createComponent(UiLibraryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

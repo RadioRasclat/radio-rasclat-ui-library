@@ -16,9 +16,9 @@
       "dom"
     ],
     "paths": {
-      "pattern-lib": [
-        "dist/pattern-lib/pattern-lib",
-        "dist/pattern-lib"
+      "ui-library": [
+        "dist/ui-library/ui-library",
+        "dist/ui-library"
       ]
     }
   }
