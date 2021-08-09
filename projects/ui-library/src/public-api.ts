@@ -7,4 +7,3 @@ export * from './lib/ui-library.component';
 export * from './lib/ui-library.module';
 
 export * from './lib/button/button.component';
-export * from './lib/buttonset/buttonset.component';
