@@ -24,7 +24,7 @@
     "components": [
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-946f3b2498c7bde39879a4caf26b772e",
+            "id": "component-ButtonComponent-5b8e9bd833af393f6cfcc72a26ba440d",
             "file": "projects/ui-library/src/lib/button/button.component.ts",
             "encapsulation": [
                 "ViewEncapsulation.Emulated"
@@ -53,6 +53,11 @@
                     "defaultValue": "'primary'",
                     "line": 11,
                     "type": "\"primary\" | \"secondary\""
+                },
+                {
+                    "name": "variant",
+                    "line": 12,
+                    "type": "string | null"
                 }
             ],
             "outputsClass": [],
@@ -64,7 +69,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 15
+                    "line": 16
                 }
             ],
             "hostBindings": [],
@@ -72,11 +77,11 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';\n\n@Component({\n  selector: 'pl-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n  encapsulation: ViewEncapsulation.Emulated\n})\nexport class ButtonComponent implements OnInit {\n  @Input('label') label: string | null;\n  @Input('variant') variant: 'primary' | 'secondary' = 'primary';\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "sourceCode": "import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';\n\n@Component({\n  selector: 'pl-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss'],\n  encapsulation: ViewEncapsulation.Emulated\n})\nexport class ButtonComponent implements OnInit {\n  @Input('label') label: string | null;\n  @Input('variant') variant: 'primary' | 'secondary' = 'primary';\n  @Input('variant') icon: string | null;\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../../styles/utils';\n\n:host {\n  display: inline-block;\n}\n\nbutton {\n  border: 0;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  cursor: pointer;\n  font-family: \"Adieu\";\n  font-size: 1rem;\n  min-width: 60px;\n  min-height: 40px;\n  padding: 8px 12px;\n  border-radius: 24px;\n\n  &.primary {\n    background: #6157f7;\n    color: #ffffff;\n  }\n\n  &.secondary {\n    background: transparent;\n    color: #000000;\n    border: 2px solid #e0e0e0;\n  }\n}\n",
+                    "data": "@import '../../styles/utils';\n\n:host {\n  display: inline-block;\n}\n\nbutton {\n  border: 0;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  cursor: pointer;\n  font-family: \"Adieu\";\n  font-size: 1rem;\n  min-width: 60px;\n  padding: .7rem 1rem;\n  border-radius: 24px;\n\n  &.primary {\n    background: #6157f7;\n    color: #ffffff;\n  }\n\n  &.secondary {\n    background: transparent;\n    color: #000000;\n    border: 2px solid #e0e0e0;\n  }\n}\n",
                     "styleUrl": "./button.component.scss"
                 }
             ],
@@ -85,70 +90,12 @@
                 "name": "constructor",
                 "description": "",
                 "args": [],
-                "line": 11
+                "line": 12
             },
             "implements": [
                 "OnInit"
             ],
             "templateData": "<button\n  [class.primary] = \"variant === 'primary'\"\n  [class.secondary] = \"variant === 'secondary'\"\n>\n  {{label ? label : \"No Label provided 🧐\"}}\n</button>\n"
-        },
-        {
-            "name": "ButtonsetComponent",
-            "id": "component-ButtonsetComponent-828982bc8ad2494d4e8e5b00af64305d",
-            "file": "projects/ui-library/src/lib/buttonset/buttonset.component.ts",
-            "encapsulation": [
-                "ViewEncapsulation.Emulated"
-            ],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "pl-buttonset",
-            "styleUrls": [
-                "./buttonset.component.scss"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./buttonset.component.html"
-            ],
-            "viewProviders": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [
-                {
-                    "name": "ngOnInit",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 13
-                }
-            ],
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "",
-            "type": "component",
-            "sourceCode": "import { Component, OnInit, ViewEncapsulation } from '@angular/core';\n\n@Component({\n  selector: 'pl-buttonset',\n  templateUrl: './buttonset.component.html',\n  styleUrls: ['./buttonset.component.scss'],\n  encapsulation: ViewEncapsulation.Emulated\n})\nexport class ButtonsetComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": "@import '../../styles/utils'; // TODO: create alias to make this shorter\n\n:host {\n    display: inline-block;\n    padding: 1.5em;\n    border: 3px solid $primary-col;\n}\n\n.buttonset {\n    display: inline-block;\n    border-radius: $button-radius;\n    box-shadow: $pl-button-shadow;\n}",
-                    "styleUrl": "./buttonset.component.scss"
-                }
-            ],
-            "stylesData": "",
-            "constructorObj": {
-                "name": "constructor",
-                "description": "",
-                "args": [],
-                "line": 9
-            },
-            "implements": [
-                "OnInit"
-            ],
-            "templateData": "<div class=\"buttonset\">\n    <pl-button label=\"Button 1\" [bordersRight]=\"false\" noShadow=true></pl-button>\n    <pl-button label=\"Button 2\" [bordersLeft]=\"false\" [bordersRight]=\"false\" [noShadow]=\"true\"></pl-button>\n    <pl-button label=\"Button 3\" [bordersLeft]=\"false\" [noShadow]=\"true\"></pl-button>\n</div>"
         },
         {
             "name": "UiLibraryComponent",
@@ -213,9 +160,6 @@
                             "name": "ButtonComponent"
                         },
                         {
-                            "name": "ButtonsetComponent"
-                        },
-                        {
                             "name": "UiLibraryComponent"
                         }
                     ]
@@ -229,9 +173,6 @@
                     "elements": [
                         {
                             "name": "ButtonComponent"
-                        },
-                        {
-                            "name": "ButtonsetComponent"
                         },
                         {
                             "name": "UiLibraryComponent"
@@ -252,14 +193,6 @@
     "miscellaneous": {
         "variables": [
             {
-                "name": "ButtonsetSample",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "stories/Buttonset.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
                 "name": "context",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -269,6 +202,14 @@
             },
             {
                 "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "PrimaryWithIcon",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "stories/Button.stories.ts",
@@ -291,44 +232,26 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "SecondaryWithIcon",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "stories/Button.stories.ts",
                 "type": "Story<ButtonComponent>",
                 "defaultValue": "(args: ButtonComponent) => ({\n  component: ButtonComponent,\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "stories/Buttonset.stories.ts",
-                "type": "Story<ButtonsetComponent>",
-                "defaultValue": "(args: ButtonsetComponent) => ({\n  component: ButtonsetComponent,\n  props: args,\n})"
             }
         ],
         "functions": [],
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
-            "stories/Buttonset.stories.ts": [
-                {
-                    "name": "ButtonsetSample",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/Buttonset.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "stories/Buttonset.stories.ts",
-                    "type": "Story<ButtonsetComponent>",
-                    "defaultValue": "(args: ButtonsetComponent) => ({\n  component: ButtonsetComponent,\n  props: args,\n})"
-                }
-            ],
             "projects/ui-library/src/test.ts": [
                 {
                     "name": "context",
@@ -356,7 +279,23 @@
                     "defaultValue": "Template.bind({})"
                 },
                 {
+                    "name": "PrimaryWithIcon",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Button.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
                     "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/Button.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "SecondaryWithIcon",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "stories/Button.stories.ts",
@@ -388,16 +327,7 @@
                 "linktype": "component",
                 "name": "ButtonComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/ui-library/src/lib/buttonset/buttonset.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "ButtonsetComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/6",
                 "status": "low"
             },
             {
@@ -453,6 +383,16 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "PrimaryWithIcon",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "Secondary",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
@@ -463,23 +403,13 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Template",
+                "name": "SecondaryWithIcon",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "stories/Buttonset.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "ButtonsetSample",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "stories/Buttonset.stories.ts",
+                "filePath": "stories/Button.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
