@@ -12,7 +12,7 @@
       },
       "root": "projects/ui-library",
       "sourceRoot": "projects/ui-library/src",
-      "prefix": "pl",
+      "prefix": "rasclat",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",

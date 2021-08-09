@@ -4,13 +4,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "pl",
+      "rasclat",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "pl",
+      "rasclat",
       "kebab-case"
     ]
   }

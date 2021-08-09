@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'pl-ui-library',
+  selector: 'rasclat-ui-library',
   template: `
     <p>
       ui-library works!
