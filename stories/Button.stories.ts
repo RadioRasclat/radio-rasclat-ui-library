@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import { ButtonComponent } from '../projects/ui-library/src/lib/button/button.component';
 
 export default {
-  title: 'Atomics/Buttons',
+  title: 'Components/Buttons',
   component: ButtonComponent,
   argTypes: {
     label: { control: 'text' },
